@@ -15,7 +15,10 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
       <section className="work-details-area">
         <div className="container">
           <div className="work-details-area-inner section-spacing-top">
-            <div className="work-details-wrapper fade-anim" suppressHydrationWarning={true}>
+            <div
+              className="work-details-wrapper fade-anim"
+              suppressHydrationWarning={true}
+            >
               <div className="work-details">
                 {/* Meta Section */}
                 <div className="meta-wrapper">
@@ -45,7 +48,7 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                 </div>
 
                 {/* Problems Section */}
-                <div className="details-info">
+                {/* <div className="details-info">
                   <h3 className="title">{problems?.title}</h3>
                   <div className="text-wrapper">
                     {problems?.paragraphs?.map((para, idx) => (
@@ -59,10 +62,10 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                       <img src={src} alt={`problems-${idx}`} key={idx} />
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Solutions Section */}
-                <div className="details-info">
+                {/* <div className="details-info">
                   <h3 className="title">{solutions?.title}</h3>
                   <div className="text-wrapper">
                     {solutions?.paragraphs?.map((para, idx) => (
@@ -71,7 +74,7 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                       </p>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

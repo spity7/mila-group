@@ -34,7 +34,10 @@ const WorkSection: React.FC<WorkProps> = ({
         <div className="meta fade-anim" suppressHydrationWarning={true}>
           <p className="total-item">All showcases (32)</p>
         </div>
-        <div className="filter-wrapper fade-anim" suppressHydrationWarning={true}>
+        <div
+          className="filter-wrapper fade-anim"
+          suppressHydrationWarning={true}
+        >
           <div className="filter-box">
             <NiceSelectWrapper
               id="sort"
@@ -74,19 +77,29 @@ const WorkSection: React.FC<WorkProps> = ({
         <div className="container">
           <div className={`work-area-${type}-inner section-spacing`}>
             <WorkFilter />
-            <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
+            <div
+              className="works-wrapper-box fade-anim"
+              suppressHydrationWarning={true}
+            >
               <div className="works-wrapper">
                 {workData?.projects?.map((item, index) => (
-                  <div className={`work-box-${type} fade-anim`} key={item?.id} suppressHydrationWarning={true}>
+                  <div
+                    className={`work-box-${type} fade-anim`}
+                    key={item?.id}
+                    suppressHydrationWarning={true}
+                  >
                     <div className="thumb">
-                      <div className="meta">
+                      {/* <div className="meta">
                         {item?.tags?.map((tag, idx) => (
                           <span className="tag" key={idx}>
                             {tag}
                           </span>
                         ))}
-                      </div>
-                      <div className="img_anim_reveal" suppressHydrationWarning={true}>
+                      </div> */}
+                      <div
+                        className="img_anim_reveal"
+                        suppressHydrationWarning={true}
+                      >
                         <Link href={item?.link || "#"}>
                           <img
                             src={item?.image}
@@ -148,7 +161,10 @@ const WorkSection: React.FC<WorkProps> = ({
           <div className="work-area-8-inner section-spacing">
             <WorkFilter />
             <div className="work-area-2 page-portfolio-3">
-              <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
+              <div
+                className="works-wrapper-box fade-anim"
+                suppressHydrationWarning={true}
+              >
                 <div className="works-wrapper">
                   <WorkSlider work={workData} />
                 </div>
@@ -166,7 +182,10 @@ const WorkSection: React.FC<WorkProps> = ({
         <div className="work-area-inner section-spacing">
           <div className="container">
             <div className="section-header">
-              <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
+              <div
+                className="section-title-wrapper fade-anim"
+                suppressHydrationWarning={true}
+              >
                 <div className="subtitle-wrapper">
                   <span className="section-subtitle">
                     {workData?.sectionSubtitle}
@@ -176,7 +195,10 @@ const WorkSection: React.FC<WorkProps> = ({
                   <h2 className="section-title">{workData?.sectionTitle}</h2>
                 </div>
               </div>
-              <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
+              <div
+                className="btn-wrapper fade-anim"
+                suppressHydrationWarning={true}
+              >
                 <div className="t-btn-group">
                   <Link
                     className="t-btn t-btn-circle"
@@ -201,11 +223,18 @@ const WorkSection: React.FC<WorkProps> = ({
             </div>
           </div>
 
-          <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
+          <div
+            className="works-wrapper-box fade-anim"
+            suppressHydrationWarning={true}
+          >
             <div className="container">
               <div className="works-wrapper">
                 {workData?.projects?.map((item: IProject, index: number) => (
-                  <div className="work-box-1 fade-anim" key={item?.id} suppressHydrationWarning={true}>
+                  <div
+                    className="work-box-1 fade-anim"
+                    key={item?.id}
+                    suppressHydrationWarning={true}
+                  >
                     <div className="thumb">
                       <div className="meta">
                         {item?.tags?.map((tag: string, idx: number) => (
@@ -214,7 +243,10 @@ const WorkSection: React.FC<WorkProps> = ({
                           </span>
                         ))}
                       </div>
-                      <div className="img_anim_reveal" suppressHydrationWarning={true}>
+                      <div
+                        className="img_anim_reveal"
+                        suppressHydrationWarning={true}
+                      >
                         <Link href={item?.link || "#"}>
                           <img
                             src={item?.image}

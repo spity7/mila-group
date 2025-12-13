@@ -13,10 +13,8 @@ import portfolioDetailsData from "@/constant/MarketingAgency/PortfolioDetails/po
 import footerData from "@/constant/MarketingAgency/footer";
 
 export const metadata: Metadata = {
-  title:
-    "Portfolio Details || Averto - Creative Digital Agency NextJS Template",
-  description:
-    "Dive into detailed case studies and project insights with the Averto Portfolio Details template. Perfect for showcasing your creative process, technologies used, and impactful results with SEO and performance in mind.",
+  title: "Project Details || Mila Group",
+  description: "Project Details || Mila Group",
   keywords: [
     "Averto portfolio details",
     "NextJS portfolio details template",

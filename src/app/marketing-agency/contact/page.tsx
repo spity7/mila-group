@@ -14,9 +14,8 @@ import contactData from "@/constant/MarketingAgency/Contact/contact";
 import chooseUsData from "@/constant/MarketingAgency/common/choose-us";
 
 export const metadata: Metadata = {
-  title: "Contact || Averto - Creative Digital Agency NextJS Template",
-  description:
-    "Get in touch with the Averto team. Whether you have questions, project inquiries, or want to collaborate, our contact page makes it easy to connect.",
+  title: "Contact || Mila Group",
+  description: "Contact || Mila Group",
   keywords: [
     "Averto contact page",
     "NextJS contact template",
@@ -52,9 +51,9 @@ const Home = (): ReactElement => {
         <main>
           <div className="body-marketing-agency">
             <Breadcrumb
-              title="AGENCY"
-              subTitle="Contact"
-              pageName="AGENCY CONTACT"
+              title="CONTACT US"
+              subTitle="Mila Group"
+              pageName="CONTACT"
             />
           </div>
           <ContactMetaSection />

@@ -11,9 +11,8 @@ import workData from "@/constant/MarketingAgency/workTwo";
 import footerData from "@/constant/MarketingAgency/footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio Grid || Averto - Creative Digital Agency NextJS Template",
-  description:
-    "Showcase your projects in a clean and organized grid layout with the Averto Portfolio Grid template. Designed for creative professionals to display work with a modern, responsive, and SEO-friendly Next.js structure.",
+  title: "Projects || Mila Group",
+  description: "Projects || Mila Group",
   keywords: [
     "Averto portfolio grid",
     "NextJS portfolio grid template",
@@ -46,9 +45,9 @@ const Home = (): ReactElement => {
       <SmoothScroll>
         <main>
           <Breadcrumb
-            title="AGENCY"
-            subTitle="Portfolio Grid"
-            pageName="AGENCY PORTFOLIO"
+            title="PROJECTS"
+            subTitle="Mila Group"
+            pageName="Projects"
           />
           <WorkSection pageInner={true} type={7} data={workData} />
         </main>

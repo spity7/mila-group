@@ -17,9 +17,8 @@ import testimonialData from "@/constant/MarketingAgency/testimonial";
 import footerData from "@/constant/MarketingAgency/footer";
 
 export const metadata: Metadata = {
-  title: "Services || Averto - Creative Digital Agency NextJS Template",
-  description:
-    "Showcase your agency’s wide range of services with the Averto Services template. Designed to present offerings clearly and attractively, optimized for performance and SEO in Next.js.",
+  title: "Services || Mila Group",
+  description: "Services || Mila Group",
   keywords: [
     "Averto services page",
     "NextJS services template",
@@ -45,24 +44,24 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <div className="body-marketing-agency">
-      <Header />
+        <Header />
       </div>
       <SmoothScroll>
         <main>
-        <div className="body-marketing-agency">
-          <Breadcrumb
-            title="AGENCY"
-            subTitle="Services"
-            pageName="AGENCY SERVICES"
-          />
-          <ProcessSection data={processData} />
-          <ServiceSection data={serviceData} />
-          <ChooseUsSection chooseUSTwo={true} data={chooseUsData} />
-          <TestimonialsSection type="v2" data={testimonialData}/>
-        </div>
+          <div className="body-marketing-agency">
+            <Breadcrumb
+              title="SERVICES"
+              subTitle="Mila Group"
+              pageName="SERVICES"
+            />
+            <ProcessSection data={processData} />
+            {/* <ServiceSection data={serviceData} /> */}
+            <ChooseUsSection chooseUSTwo={true} data={chooseUsData} />
+            <TestimonialsSection type="v2" data={testimonialData} />
+          </div>
         </main>
         <div className="body-marketing-agency">
-        <FooterSection data={footerData} />
+          <FooterSection data={footerData} />
         </div>
       </SmoothScroll>
     </div>
