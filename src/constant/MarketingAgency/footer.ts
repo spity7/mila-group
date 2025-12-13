@@ -59,8 +59,8 @@ const footerData: IFooterData = {
     buttonText: "Contact Us",
   },
   logo: {
-    src: "/assets/imgs/logo/logo-2-light.png",
-    url: "/marketing-agency/",
+    src: "/assets/imgs/logo/Asset 2W.png",
+    url: "/",
   },
   description:
     "We place great emphasis on thoughtful design, innovative solutions, and the needs of the communities we serve.",
@@ -73,8 +73,8 @@ const footerData: IFooterData = {
     title: "Mila Group",
     links: [
       { label: "About Us", url: "/marketing-agency/about" },
-      { label: "Our Services", url: "#" },
-      { label: "Our Projects", url: "#" },
+      { label: "Our Services", url: "/marketing-agency/services" },
+      { label: "Our Projects", url: "/marketing-agency/portfolio-grid" },
       // { label: "Careers", url: "#" },
     ],
   },
