@@ -9,7 +9,7 @@ interface AboutProps {
   data: IAboutData;
 }
 
-const AboutSection: React.FC<AboutProps> = ({ data: aboutData }) => {
+const AboutSection2: React.FC<AboutProps> = ({ data: aboutData }) => {
   useEffect(() => {
     const counters = document.querySelectorAll<HTMLElement>(".t-counter");
 
@@ -63,7 +63,7 @@ const AboutSection: React.FC<AboutProps> = ({ data: aboutData }) => {
                   <h2 className="section-title">{aboutData?.title}</h2>
                 </div>
               </div>
-              <div className="btn-wrapper">
+              {/* <div className="btn-wrapper">
                 <div className="t-btn-group">
                   <Link
                     href={aboutData?.buttonLink || "#"}
@@ -84,7 +84,7 @@ const AboutSection: React.FC<AboutProps> = ({ data: aboutData }) => {
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="counter-wrapper-box section-spacing-top">
@@ -114,4 +114,4 @@ const AboutSection: React.FC<AboutProps> = ({ data: aboutData }) => {
   );
 };
 
-export default AboutSection;
+export default AboutSection2;

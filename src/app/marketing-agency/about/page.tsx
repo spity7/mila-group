@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import type { Metadata } from "next";
 import Header from "@/components/MarketingAgency/common/Header";
 import Breadcrumb from "@/components/MarketingAgency/common/Breadcrumb";
-import AboutSection from "@/components/MarketingAgency/AboutSection";
+import AboutSection2 from "@/components/MarketingAgency/AboutSection2";
 import VideoSection from "@/components/MarketingAgency/About/VideoSection";
 import BrandSection from "@/components/MarketingAgency/BrandSection";
 import TeamsSection from "@/components/MarketingAgency/TeamSection";
@@ -21,9 +21,8 @@ import blogData from "@/constant/MarketingAgency/blog";
 import footerData from "@/constant/MarketingAgency/footer";
 
 export const metadata: Metadata = {
-  title: "About Us || Averto - Creative Digital Agency NextJS Template",
-  description:
-    "Explore the About Us page of Averto – a modern, high-performance agency template built with Next.js. Meet the team, learn our mission, and discover why Averto is trusted by creative professionals and businesses.",
+  title: "About Us | Mila Group",
+  description: "About Us",
   keywords: [
     "Averto About Us",
     "NextJS about page",
@@ -64,17 +63,17 @@ const AboutPage = (): ReactElement => {
           <div className="body-marketing-agency">
             <Breadcrumb
               title="ABOUT"
-              subTitle="Agency"
-              pageName="ABOUT AGENCY"
+              subTitle="Mila Group"
+              pageName="ABOUT MILA GROUP"
             />
-            <AboutSection data={aboutData} />
+            <AboutSection2 data={aboutData} />
           </div>
           <VideoSection data={videoData} />
           <div className="body-marketing-agency">
-            <BrandSection data={brandData} />
-            <TeamsSection data={teamData} />
             <TextSliderSection data={textSliderData} />
-            <BlogSection data={blogData} />
+            <BrandSection data={brandData} />
+            {/* <TeamsSection data={teamData} /> */}
+            {/* <BlogSection data={blogData} /> */}
           </div>
         </main>
         <div className="body-marketing-agency">

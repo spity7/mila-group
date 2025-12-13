@@ -17,14 +17,15 @@ const aboutData: IAboutData = {
   subtitle: "Who we are",
   shapes: ["/assets/imgs/shape/shape-32.webp"],
   title:
-    "Averto believes in the power of creativity to ignite growth. We aim to empower businesses to unlock their full potential by delivering cutting-edge marketing solutions that drive results.",
+    "Mila Group believes in the power of design to shape a better future. We create innovative architectural solutions that elevate communities and unlock the full potential of every space.",
   buttonLink: "/marketing-agency/about",
   buttonText: "About Us",
   counters: [
-    { number: "100%", label: "Service satisfaction guarantee" },
-    { number: "32k", label: "Successfully finished projects" },
-    { number: "25+", label: "Experienced engineering members" },
+    { number: "100%", label: "Commitment to quality design" },
+    { number: "150+", label: "Architectural projects completed" },
+    { number: "20+", label: "Skilled architects & designers" },
   ],
-  image: "/assets/imgs/gallery/image-18.webp",
+  image:
+    "/assets/imgs/gallery/projects_images_1762639525686_cam016.1 - Mila2.jpg",
 };
 export default aboutData;

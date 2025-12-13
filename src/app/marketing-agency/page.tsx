@@ -10,13 +10,14 @@ import HeroSection from "@/components/MarketingAgency/HeroSection";
 import ServiceSection from "@/components/MarketingAgency/ServiceSection";
 import TeamSection from "@/components/MarketingAgency/TeamSection";
 import TestimonialsSection from "@/components/MarketingAgency/TestimonialSection";
-import WorkSection from "@/components/MarketingAgency/WorkSection";
+// import WorkSection from "@/components/MarketingAgency/WorkSection";
 import SmoothScroll from "@/components/MarketingAgency/Animation/SmoothScroll";
+import ProcessSection from "@/components/CreativeAgency/ProcessSection";
+import WorkSection from "@/components/DigitalAgency/WorkSection";
 
-export const metadata:Metadata = {
-  title: "Marketing Agency || Averto - Creative Digital Agency NextJS Template",
-  description:
-    "Averto Marketing Agency template offers a powerful and modern homepage designed for marketing firms and agencies. Showcase your campaigns, services, team, and client success with SEO optimization and fast performance.",
+export const metadata: Metadata = {
+  title: "Mila Group",
+  description: "Mila Group",
   keywords: [
     "Averto marketing agency",
     "NextJS marketing template",
@@ -41,33 +42,37 @@ export const metadata:Metadata = {
   },
 };
 
-// all data 
+// all data
 import heroData from "@/constant/MarketingAgency/hero";
 import aboutData from "@/constant/MarketingAgency/about";
 import serviceData from "@/constant/MarketingAgency/service";
-import  workData from "@/constant/MarketingAgency/work";
+// import workData from "@/constant/MarketingAgency/work";
 import testimonialData from "@/constant/MarketingAgency/testimonial";
 import brandsData from "@/constant/MarketingAgency/brand";
 import teamData from "@/constant/MarketingAgency/team";
 import blogData from "@/constant/MarketingAgency/blog";
 import footerData from "@/constant/MarketingAgency/footer";
+import processData from "@/constant/CreativeAgency/process";
+import workData from "@/constant/DigitalAgency/work";
 
-const Home = ():ReactElement => {
+const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-marketing-agency">
       <Header />
       <SmoothScroll>
         <main>
-          <HeroSection data={heroData}/>
-          <AboutSection data={aboutData}/>
-          <ServiceSection data={serviceData}/>
-          <WorkSection data={workData}/>
-          <TestimonialsSection data={testimonialData}/>
-          <BrandSection data={brandsData}/>
-          <TeamSection data={teamData}/>
-          <BlogSection data={blogData}/>
+          <HeroSection data={heroData} />
+          <AboutSection data={aboutData} />
+          {/* <ServiceSection data={serviceData} /> */}
+          <ProcessSection data={processData} />
+          <WorkSection data={workData} />
+          {/* <WorkSection data={workData} /> */}
+          {/* <TestimonialsSection data={testimonialData} /> */}
+          <BrandSection data={brandsData} />
+          {/* <TeamSection data={teamData} /> */}
+          {/* <BlogSection data={blogData} /> */}
         </main>
-        <FooterSection data={footerData}/>
+        <FooterSection data={footerData} />
       </SmoothScroll>
     </div>
   );

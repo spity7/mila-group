@@ -62,10 +62,17 @@ const HeroSection: React.FC<HeroProps> = ({ data: heroData }) => {
                   </h1>
                 </div>
               </div>
-              <div className="text-wrapper fade-anim" data-delay="0.90" suppressHydrationWarning={true}>
+              <div
+                className="text-wrapper fade-anim"
+                data-delay="0.90"
+                suppressHydrationWarning={true}
+              >
                 <p className="text">{heroData?.description}</p>
               </div>
-              <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
+              <div
+                className="btn-wrapper fade-anim"
+                suppressHydrationWarning={true}
+              >
                 {/* Using Next.js Link component for routing */}
                 <Link
                   href={heroData?.buttonLink || "#"}

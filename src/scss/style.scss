@@ -1180,14 +1180,14 @@
 
   .header-logo {
     // width: 101px;
-    width: 140px;
+    width: 240px;
 
     // @media #{$xl} {
     //   width: 101px;
     // }
 
     @media #{$md} {
-      width: 101px;
+      width: 201px;
     }
 
     img {
@@ -1481,14 +1481,14 @@
 
   .header-logo {
     // width: 101px;
-    width: 140px;
+    width: 240px;
 
     // @media #{$xl} {
     //   width: 101px;
     // }
 
     @media #{$md} {
-      width: 101px;
+      width: 201px;
     }
 
     img {
@@ -3810,19 +3810,19 @@
   .area-shape-image {
     .shape-1 {
       position: absolute;
-      top: -36px;
+      top: 150px;
       right: 127px;
-      transform: rotate(185deg);
-      width: 600px;
-      max-width: 600px;
+      // transform: rotate(185deg);
+      width: 300px;
+      max-width: 300px;
       z-index: -1;
 
       @media #{$xxl} {
-        width: 500px;
+        width: 250px;
       }
 
       @media #{$xl} {
-        width: 400px;
+        width: 200px;
       }
 
       @media #{$lg} {
@@ -3833,18 +3833,18 @@
 
       @media #{$md} {
         top: auto;
-        right: 77px;
+        right: 40px;
         bottom: 0;
       }
 
       @media #{$sm} {
-        width: 200px;
+        width: 100px;
         top: 0;
         right: 0;
       }
 
       @media #{$xs} {
-        width: 150px;
+        width: 75px;
         top: 0;
         right: 70px;
       }

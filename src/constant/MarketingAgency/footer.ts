@@ -62,19 +62,20 @@ const footerData: IFooterData = {
     src: "/assets/imgs/logo/logo-2-light.png",
     url: "/marketing-agency/",
   },
-  description: "We place great emphasis on designers, artists, and brands.",
+  description:
+    "We place great emphasis on thoughtful design, innovative solutions, and the needs of the communities we serve.",
   socials: [
     { icon: "fa-brands fa-facebook-f", url: "#" },
     { icon: "fa-brands fa-twitter", url: "#" },
     { icon: "fa-brands fa-linkedin-in", url: "#" },
   ],
   company: {
-    title: "Company",
+    title: "Mila Group",
     links: [
       { label: "About Us", url: "/marketing-agency/about" },
-      { label: "Our portfolio", url: "#" },
-      { label: "Our services", url: "#" },
-      { label: "Careers", url: "#" },
+      { label: "Our Services", url: "#" },
+      { label: "Our Projects", url: "#" },
+      // { label: "Careers", url: "#" },
     ],
   },
   useful: {
@@ -93,8 +94,8 @@ const footerData: IFooterData = {
   },
   copyright: {
     text: "Copyright © 2025",
-    author: "Pixavation",
-    url: "https://themeforest.net/user/pixavation",
+    author: "Mila Group",
+    url: "https://milagroupco.com",
     links: [{ label: "Terms & Conditions", url: "#" }],
   },
 };

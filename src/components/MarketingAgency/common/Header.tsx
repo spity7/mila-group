@@ -25,86 +25,89 @@ interface HeaderData {
 
 const headerData: HeaderData = {
   logo: {
-    src: "/assets/imgs/logo/logo.png",
+    src: "/assets/imgs/logo/Asset 3B.png",
     alt: "Site Logo",
-    href: "/marketing-agency",
+    href: "/",
   },
   menuItems: [
     {
       title: "Home",
-      children: [
-        { title: "Creative Agency", href: "/creative-agency" },
-        { title: "Design Agency", href: "/design-agency" },
-        { title: "Digital Agency", href: "/digital-agency" },
-        { title: "AI Agency", href: "/ai-agency" },
-        { title: "Marketing Agency", href: "/marketing-agency" },
-        { title: "Digital Collective", href: "/digital-collective" },
-        { title: "Marketing Agency V2", href: "/marketing-agency-v2" },
-        { title: "Financial Advisor", href: "/financial-advisor" },
-      ],
+      href: "/",
+      // children: [
+      //   { title: "Creative Agency", href: "/creative-agency" },
+      //   { title: "Design Agency", href: "/design-agency" },
+      //   { title: "Digital Agency", href: "/digital-agency" },
+      //   { title: "AI Agency", href: "/ai-agency" },
+      //   { title: "Marketing Agency", href: "/marketing-agency" },
+      //   { title: "Digital Collective", href: "/digital-collective" },
+      //   { title: "Marketing Agency V2", href: "/marketing-agency-v2" },
+      //   { title: "Financial Advisor", href: "/financial-advisor" },
+      // ],
     },
     { title: "About Us", href: "/marketing-agency/about" },
     {
       title: "Service",
-      children: [
-        { title: "Services", href: "/marketing-agency/services" },
-        { title: "Service Details", href: "/marketing-agency/service-details" },
-      ],
+      href: "/marketing-agency/services",
+      // children: [
+      //   { title: "Services", href: "/marketing-agency/services" },
+      //   { title: "Service Details", href: "/marketing-agency/service-details" },
+      // ],
     },
     {
-      title: "Pages",
-      children: [
-        { title: "About Us", href: "/marketing-agency/about" },
-        {
-          title: "Service",
-          children: [
-            { title: "Services", href: "/marketing-agency/services" },
-            {
-              title: "Service Details",
-              href: "/marketing-agency/service-details",
-            },
-          ],
-        },
-        {
-          title: "Portfolio Pages",
-          children: [
-            { title: "Portfolio", href: "/marketing-agency/portfolio" },
-            {
-              title: "Portfolio Grid",
-              href: "/marketing-agency/portfolio-grid",
-            },
-            {
-              title: "Portfolio Slider",
-              href: "/marketing-agency/portfolio-slider",
-            },
-            {
-              title: "Portfolio Details",
-              href: "/marketing-agency/portfolio-details",
-            },
-          ],
-        },
-        { title: "Team", href: "/marketing-agency/team" },
-        {
-          title: "Blog Pages",
-          children: [
-            { title: "Blog", href: "/marketing-agency/blog" },
-            { title: "Blog Grid", href: "/marketing-agency/blog-grid" },
-            { title: "Blog Details", href: "/marketing-agency/blog-details" },
-          ],
-        },
-        { title: "FAQ", href: "/marketing-agency/faq" },
-        { title: "Contact", href: "/marketing-agency/contact" },
-      ],
+      title: "Projects",
+      href: "/marketing-agency/portfolio-grid",
+      // children: [
+      //   { title: "About Us", href: "/marketing-agency/about" },
+      //   {
+      //     title: "Service",
+      //     children: [
+      //       { title: "Services", href: "/marketing-agency/services" },
+      //       {
+      //         title: "Service Details",
+      //         href: "/marketing-agency/service-details",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "Portfolio Pages",
+      //     children: [
+      //       { title: "Portfolio", href: "/marketing-agency/portfolio" },
+      //       {
+      //         title: "Portfolio Grid",
+      //         href: "/marketing-agency/portfolio-grid",
+      //       },
+      //       {
+      //         title: "Portfolio Slider",
+      //         href: "/marketing-agency/portfolio-slider",
+      //       },
+      //       {
+      //         title: "Portfolio Details",
+      //         href: "/marketing-agency/portfolio-details",
+      //       },
+      //     ],
+      //   },
+      //   { title: "Team", href: "/marketing-agency/team" },
+      //   {
+      //     title: "Blog Pages",
+      //     children: [
+      //       { title: "Blog", href: "/marketing-agency/blog" },
+      //       { title: "Blog Grid", href: "/marketing-agency/blog-grid" },
+      //       { title: "Blog Details", href: "/marketing-agency/blog-details" },
+      //     ],
+      //   },
+      //   { title: "FAQ", href: "/marketing-agency/faq" },
+      //   { title: "Contact", href: "/marketing-agency/contact" },
+      // ],
     },
-    {
-      title: "Blog",
-      children: [
-        { title: "Blog", href: "/marketing-agency/blog" },
-        { title: "Blog Grid", href: "/marketing-agency/blog-grid" },
-        { title: "Blog Details", href: "/marketing-agency/blog-details" },
-      ],
-    },
-    { title: "Contact", href: "/marketing-agency/contact" },
+    // {
+    //   title: "Blog",
+    //   children: [
+    //     { title: "Blog", href: "/marketing-agency/blog" },
+    //     { title: "Blog Grid", href: "/marketing-agency/blog-grid" },
+    //     { title: "Blog Details", href: "/marketing-agency/blog-details" },
+    //   ],
+    // },
+    // { title: "Contact", href: "/marketing-agency/contact" },
   ],
   cta: {
     href: "/marketing-agency/contact",

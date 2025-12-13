@@ -1,4 +1,3 @@
-
 export interface IProject {
   id: number;
   title: string;
@@ -15,42 +14,43 @@ export interface WorkData {
   projects: IProject[];
 }
 
-const workData:WorkData = {
-    sectionSubtitle: "Our Portfolio",
-    sectionTitle: "Selected works",
-    viewAllText: "See All Works",
-    viewAllLink: "/digital-agency/portfolio",
-    projects: [
-      {
-        id: 1,
-        title: "Brand identity overhaul for Luxe Co.",
-        tags: ["BRANDING", "MOCKUP"],
-        image: "/assets/imgs/project/project-1.webp",
-        link: "/digital-agency/portfolio-details",
-      },
-      {
-        id: 2,
-        title: "E-Commerce platform design for shopy",
-        tags: ["BRANDING", "MOCKUP"],
-        image: "/assets/imgs/project/project-2.webp",
-        link: "/digital-agency/portfolio-details",
-      },
-      {
-        id: 3,
-        title: "Mobile app design for FitPro agency",
-        tags: ["BRANDING", "MOCKUP"],
-        image: "/assets/imgs/project/project-3.webp",
-        link: "/digital-agency/portfolio-details",
-      },
-      {
-        id: 4,
-        title: "Digital Ad campaign for FlexWear",
-        tags: ["BRANDING", "MOCKUP"],
-        image: "/assets/imgs/project/project-4.webp",
-        link: "/digital-agency/portfolio-details",
-      },
-    ],
-  };
-  
-  export default workData;
-  
+const workData: WorkData = {
+  sectionSubtitle: "Our Projects",
+  sectionTitle: "Selected Projects",
+  viewAllText: "See All Projects",
+  viewAllLink: "/digital-agency/portfolio",
+  projects: [
+    {
+      id: 1,
+      title: "Mila Residence",
+      tags: ["BRANDING", "MOCKUP"],
+      image:
+        "/assets/imgs/project/projects_images_1762639523506_cam010.2 - Mila2.jpg",
+      link: "/digital-agency/portfolio-details",
+    },
+    {
+      id: 2,
+      title: "Tyre Residence",
+      tags: ["BRANDING", "MOCKUP"],
+      image:
+        "/assets/imgs/project/projects_images_1762639524215_cam013.2 - Mila2.jpg",
+      link: "/digital-agency/portfolio-details",
+    },
+    // {
+    //   id: 3,
+    //   title: "Mobile app design for FitPro agency",
+    //   tags: ["BRANDING", "MOCKUP"],
+    //   image: "/assets/imgs/project/project-3.webp",
+    //   link: "/digital-agency/portfolio-details",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Digital Ad campaign for FlexWear",
+    //   tags: ["BRANDING", "MOCKUP"],
+    //   image: "/assets/imgs/project/project-4.webp",
+    //   link: "/digital-agency/portfolio-details",
+    // },
+  ],
+};
+
+export default workData;

@@ -74,7 +74,7 @@ const Home = (): ReactElement => {
           <AwardsSection data={awardsData} />
           <BlogSection data={blogData} />
         </main>
-        <FooterSection data={footerData}/>
+        <FooterSection data={footerData} />
       </SmoothScroll>
     </div>
   );
