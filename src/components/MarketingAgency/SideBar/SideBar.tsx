@@ -68,11 +68,11 @@ const Sidebar = ({
               </div>
 
               {/* Gallery */}
-              <div className="post-image">
+              {/* <div className="post-image">
                 {sidebarData?.gallery?.map((img, i) => (
                   <img key={i} src={img} alt={`gallery-${i}`} />
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Contact Info */}
