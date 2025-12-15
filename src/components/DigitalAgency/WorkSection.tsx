@@ -85,22 +85,20 @@ const WorkSection: React.FC<WorkProps> = ({
                 {workData?.projects?.map((item, index) => (
                   <div
                     className={`work-box-${type} fade-anim`}
-                    key={item?.id}
+                    key={item?._id}
                     suppressHydrationWarning={true}
                   >
                     <div className="thumb">
                       <div className="meta">
-                        {item?.tags?.map((tag, idx) => (
-                          <span className="tag" key={idx}>
-                            {tag}
-                          </span>
-                        ))}
+                        <span className="tag">{item?.status}</span>
                       </div>
                       <div className="img_anim_reveal">
-                        <Link href={item?.link || "#"}>
+                        <Link
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
+                        >
                           <img
-                            src={item?.image}
-                            alt={item?.title || "Project image"}
+                            src={item?.thumbnailUrl}
+                            alt={item?.name || "Project image"}
                           />
                         </Link>
                       </div>
@@ -111,26 +109,30 @@ const WorkSection: React.FC<WorkProps> = ({
                         <span className="shape">/</span>
                       </span>
                       <h3 className="title">
-                        <Link href={item?.link || "#"}>{item?.title}</Link>
+                        <Link
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
+                        >
+                          {item?.name}
+                        </Link>
                       </h3>
                       <div
                         className={`t-btn-group ${type === 7 ? "d-none" : ""}`}
                       >
                         <Link
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                         <Link
                           className="t-btn t-btn-primary"
-                          href={item?.link || "#"}
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
                         >
                           View Full Project
                         </Link>
                         <Link
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>
@@ -228,22 +230,20 @@ const WorkSection: React.FC<WorkProps> = ({
                 {workData?.projects?.map((item: IProject, index: number) => (
                   <div
                     className="work-box-1 fade-anim"
-                    key={item?.id}
+                    key={item?._id}
                     suppressHydrationWarning={true}
                   >
                     <div className="thumb">
-                      {/* <div className="meta">
-                        {item?.tags?.map((tag: string, idx: number) => (
-                          <span className="tag" key={idx}>
-                            {tag}
-                          </span>
-                        ))}
-                      </div> */}
+                      <div className="meta">
+                        <span className="tag">{item?.status}</span>
+                      </div>
                       <div className="img_anim_reveal">
-                        <Link href={item?.link || "#"}>
+                        <Link
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
+                        >
                           <img
-                            src={item?.image}
-                            alt={item?.title || "Project image"}
+                            src={item?.thumbnailUrl}
+                            alt={item?.name || "Project image"}
                           />
                         </Link>
                       </div>
@@ -254,24 +254,28 @@ const WorkSection: React.FC<WorkProps> = ({
                         <span className="shape">/</span>
                       </span>
                       <h3 className="title">
-                        <Link href={item?.link || "#"}>{item?.title}</Link>
+                        <Link
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
+                        >
+                          {item?.name}
+                        </Link>
                       </h3>
                       <div className="t-btn-group">
                         <Link
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>
                         <Link
                           className="t-btn t-btn-primary"
-                          href={item?.link || "#"}
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
                         >
                           View Full Project
                         </Link>
                         <Link
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
+                          href={`/digital-agency/portfolio-details/${item?._id}`}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>

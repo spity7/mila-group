@@ -1,10 +1,12 @@
-import {ProcessData} from '@/constant/CreativeAgency/process';
+import { ProcessData } from "@/constant/CreativeAgency/process";
 
 interface ProcessSectionProps {
   data: ProcessData[];
 }
 
-const ProcessSection:React.FC<ProcessSectionProps> = ({data:processData}) => {
+const ProcessSection: React.FC<ProcessSectionProps> = ({
+  data: processData,
+}) => {
   return (
     <section className="process-area-3">
       <div className="container">
@@ -12,7 +14,9 @@ const ProcessSection:React.FC<ProcessSectionProps> = ({data:processData}) => {
           <div className="section-header">
             <div className="section-title-wrapper fade-anim">
               <div className="subtitle-wrapper">
-                <span className="section-subtitle">( Discover Work Process )</span>
+                <span className="section-subtitle">
+                  ( Discover Work Process )
+                </span>
               </div>
               <div className="title-wrapper">
                 <h2 className="section-title">How we works</h2>
@@ -25,7 +29,10 @@ const ProcessSection:React.FC<ProcessSectionProps> = ({data:processData}) => {
                 <div key={index} className="process-box-3 fade-anim">
                   <div className="content">
                     <h3 className="title">{item.title}</h3>
-                    <p className="text">{item.text}</p>
+                    <p
+                      className="text"
+                      dangerouslySetInnerHTML={{ __html: item.text }}
+                    />
                   </div>
                   <span className="number">{item.number}</span>
                 </div>

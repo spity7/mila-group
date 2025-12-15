@@ -1,11 +1,11 @@
- export interface IPortfolioSliderData {
-    title: string;
-    image: string;
-    tags: string[];
-    link: string;
- }
- 
- const portfolioSliderData:IPortfolioSliderData[] = [
+export interface IPortfolioSliderData {
+  title: string;
+  image: string;
+  tags: string[];
+  link: string;
+}
+
+const portfolioSliderData: IPortfolioSliderData[] = [
   {
     title: "Mobile app design for FitPro agency",
     image: "/assets/imgs/project/project-3.webp",

@@ -40,7 +40,29 @@ export const metadata: Metadata = {
   },
 };
 
-const Home = (): ReactElement => {
+async function getServices() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}services`, {
+    cache: "no-store", // or use next: { revalidate: 60 }
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch services");
+  }
+
+  return res.json();
+}
+
+const Home = async (): Promise<ReactElement> => {
+  const servicesResponse = await getServices();
+
+  const processData = servicesResponse.services.map(
+    (service: any, index: number) => ({
+      number: String(index + 1).padStart(2, "0"),
+      title: service.name,
+      text: service.description.replace(/<[^>]*>/g, ""), // strip HTML
+    })
+  );
+
   return (
     <div className="body-wrapper body-inner-page">
       <div className="body-marketing-agency">

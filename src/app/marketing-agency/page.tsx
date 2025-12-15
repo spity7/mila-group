@@ -52,10 +52,51 @@ import brandsData from "@/constant/MarketingAgency/brand";
 import teamData from "@/constant/MarketingAgency/team";
 import blogData from "@/constant/MarketingAgency/blog";
 import footerData from "@/constant/MarketingAgency/footer";
-import processData from "@/constant/CreativeAgency/process";
+// import processData from "@/constant/CreativeAgency/process";
 import workData from "@/constant/DigitalAgency/work";
 
-const Home = (): ReactElement => {
+async function getServices() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}services`, {
+    cache: "no-store", // or use next: { revalidate: 60 }
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch services");
+  }
+
+  return res.json();
+}
+
+async function getProjects() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}projects`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch projects");
+  }
+
+  return res.json();
+}
+
+const Home = async (): Promise<ReactElement> => {
+  const servicesResponse = await getServices();
+  const projectsResponse = await getProjects();
+
+  // Merge fetched projects into workData
+  const updatedWorkData = {
+    ...workData,
+    projects: projectsResponse.projects,
+  };
+
+  const processData = servicesResponse.services.map(
+    (service: any, index: number) => ({
+      number: String(index + 1).padStart(2, "0"),
+      title: service.name,
+      text: service.description.replace(/<[^>]*>/g, ""), // strip HTML
+    })
+  );
+
   return (
     <div className="body-wrapper body-marketing-agency">
       <Header />
@@ -65,7 +106,7 @@ const Home = (): ReactElement => {
           <AboutSection data={aboutData} />
           {/* <ServiceSection data={serviceData} /> */}
           <ProcessSection data={processData} />
-          <WorkSection data={workData} />
+          <WorkSection data={updatedWorkData} />
           {/* <WorkSection data={workData} /> */}
           {/* <TestimonialsSection data={testimonialData} /> */}
           <BrandSection data={brandsData} />

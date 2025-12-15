@@ -2,12 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { IPortfolioSliderData } from "@/constant/DigitalAgency/PortfolioDetails/portfolio-data";
+// import { IPortfolioSliderData } from "@/constant/DigitalAgency/PortfolioDetails/portfolio-data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
+import { IProject } from "@/constant/DigitalAgency/work";
 
 interface IPortfolioSliderProps {
-  data: IPortfolioSliderData[];
+  data: IProject[];
 }
 const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({
   data: portfolioSliderData,
@@ -57,37 +58,34 @@ const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({
                 }}
                 className="work-slider"
               >
-                {portfolioSliderData?.map(
-                  (project: IPortfolioSliderData, index: number) => (
-                    <SwiperSlide key={index}>
-                      <div className="work-box-9">
-                        <div className="thumb">
-                          <div className="meta">
-                            {project?.tags?.map(
-                              (tag: string, tagIndex: number) => (
-                                <Link
-                                  className="tag"
-                                  href={project?.link}
-                                  key={tagIndex}
-                                >
-                                  {tag}
-                                </Link>
-                              )
-                            )}
-                          </div>
-                          <Link href={project?.link}>
-                            <img src={project?.image} alt="project image" />
-                          </Link>
-                          <div className="content">
-                            <h3 className="title">
-                              <Link href={project?.link}>{project?.title}</Link>
-                            </h3>
-                          </div>
+                {portfolioSliderData?.map((project: IProject, index: number) => (
+                  <SwiperSlide key={index}>
+                    <div className="work-box-9">
+                      <div className="thumb">
+                        <div className="meta">
+                          <span className="tag">{project?.status}</span>
+                        </div>
+                        <Link
+                          href={`/digital-agency/portfolio-details/${project?._id}`}
+                        >
+                          <img
+                            src={project?.thumbnailUrl}
+                            alt="project image"
+                          />
+                        </Link>
+                        <div className="content">
+                          <h3 className="title">
+                            <Link
+                              href={`/digital-agency/portfolio-details/${project?._id}`}
+                            >
+                              {project?.name}
+                            </Link>
+                          </h3>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  )
-                )}
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>

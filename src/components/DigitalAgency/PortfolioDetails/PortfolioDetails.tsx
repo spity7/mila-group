@@ -1,3 +1,4 @@
+
 import React from "react";
 import { IPortfolioDetailsData } from "@/constant/DigitalAgency/PortfolioDetails/portfolio-details-data";
 
@@ -31,21 +32,28 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                 <div className="details-info">
                   <h3 className="title">{overview?.title}</h3>
                   <div className="text-wrapper">
-                    {overview?.paragraphs?.map((para, idx) => (
-                      <p className="text" key={idx}>
-                        {para}
-                      </p>
-                    ))}
+                    {overview?.content ? (
+                      <div
+                        className="text"
+                        dangerouslySetInnerHTML={{ __html: overview.content }}
+                      />
+                    ) : (
+                      overview?.paragraphs?.map((para, idx) => (
+                        <p className="text" key={idx}>
+                          {para}
+                        </p>
+                      ))
+                    )}
                   </div>
                   <div className="gallery-wrapper">
                     {overview?.images?.map((src, idx) => (
-                      <img src={src} alt={`overview-${idx}`} key={idx} />
+                      <img src={src} alt={`overview - ${idx} `} key={idx} />
                     ))}
                   </div>
                 </div>
 
                 {/* Problems Section */}
-                <div className="details-info">
+                {/* <div className="details-info">
                   <h3 className="title">{problems?.title}</h3>
                   <div className="text-wrapper">
                     {problems?.paragraphs?.map((para, idx) => (
@@ -56,13 +64,13 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                   </div>
                   <div className="gallery-wrapper-2">
                     {problems?.images?.map((src, idx) => (
-                      <img src={src} alt={`problems-${idx}`} key={idx} />
+                      <img src={src} alt={`problems - ${ idx } `} key={idx} />
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Solutions Section */}
-                <div className="details-info">
+                {/* <div className="details-info">
                   <h3 className="title">{solutions?.title}</h3>
                   <div className="text-wrapper">
                     {solutions?.paragraphs?.map((para, idx) => (
@@ -71,7 +79,7 @@ const PortfolioDetails: React.FC<PortfolioProps> = ({
                       </p>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

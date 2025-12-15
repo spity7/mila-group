@@ -5,7 +5,8 @@ export interface IMeta {
 
 export interface IOverview {
   title: string;
-  paragraphs: string[];
+  paragraphs?: string[];
+  content?: string;
   images: string[];
 }
 
@@ -29,10 +30,10 @@ export interface IPortfolioDetailsData {
 
 const portfolioDetailsData: IPortfolioDetailsData = {
   meta: [
-    { title: "Client", text: "Lumera Studios" },
     { title: "Project", text: "Website Redesign" },
-    { title: "Duration", text: "Mar 15- Aug 20, 2024" },
-    { title: "Company Size", text: "40+ Employees" },
+    { title: "Status", text: "Finished" },
+    { title: "Location", text: "Beirut, Lebanon" },
+    { title: "Date", text: "Mar 15- Aug 20, 2024" },
   ],
   overview: {
     title: "Overview",

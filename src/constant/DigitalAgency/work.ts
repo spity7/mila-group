@@ -1,9 +1,15 @@
 export interface IProject {
-  id: number;
-  title: string;
-  tags: string[];
-  image: string;
-  link: string;
+  _id: string;
+  name: string;
+  status: string;
+  description: string;
+  location: string;
+  thumbnailUrl: string;
+  gallery: string[];
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
 }
 
 export interface WorkData {
@@ -21,35 +27,33 @@ const workData: WorkData = {
   viewAllLink: "/digital-agency/portfolio",
   projects: [
     {
-      id: 1,
-      title: "Mila Residence",
-      tags: ["BRANDING", "MOCKUP"],
-      image:
+      _id: "1",
+      name: "Mila Residence",
+      status: "BRANDING",
+      description: "",
+      location: "",
+      thumbnailUrl:
         "/assets/imgs/project/projects_images_1762639523506_cam010.2 - Mila2.jpg",
-      link: "/digital-agency/portfolio-details",
+      gallery: [],
+      date: "",
+      createdAt: "",
+      updatedAt: "",
+      __v: 0,
     },
     {
-      id: 2,
-      title: "Tyre Residence",
-      tags: ["BRANDING", "MOCKUP"],
-      image:
+      _id: "2",
+      name: "Tyre Residence",
+      status: "BRANDING",
+      description: "",
+      location: "",
+      thumbnailUrl:
         "/assets/imgs/project/projects_images_1762639524215_cam013.2 - Mila2.jpg",
-      link: "/digital-agency/portfolio-details",
+      gallery: [],
+      date: "",
+      createdAt: "",
+      updatedAt: "",
+      __v: 0,
     },
-    // {
-    //   id: 3,
-    //   title: "Mobile app design for FitPro agency",
-    //   tags: ["BRANDING", "MOCKUP"],
-    //   image: "/assets/imgs/project/project-3.webp",
-    //   link: "/digital-agency/portfolio-details",
-    // },
-    // {
-    //   id: 4,
-    //   title: "Digital Ad campaign for FlexWear",
-    //   tags: ["BRANDING", "MOCKUP"],
-    //   image: "/assets/imgs/project/project-4.webp",
-    //   link: "/digital-agency/portfolio-details",
-    // },
   ],
 };
 
