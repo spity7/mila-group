@@ -55,27 +55,23 @@ import footerData from "@/constant/MarketingAgency/footer";
 // import processData from "@/constant/CreativeAgency/process";
 import workData from "@/constant/DigitalAgency/work";
 
-async function getServices() {
+import type { ServicesResponse, Project } from "@/types/api";
+
+async function getServices(): Promise<ServicesResponse> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}services`, {
-    cache: "no-store", // or use next: { revalidate: 60 }
+    cache: "no-store",
   });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch services");
-  }
-
+  if (!res.ok) throw new Error("Failed to fetch services");
   return res.json();
 }
 
-async function getProjects() {
+async function getProjects(): Promise<{ projects: Project[] }> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}projects`, {
     cache: "no-store",
   });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch projects");
-  }
-
+  if (!res.ok) throw new Error("Failed to fetch projects");
   return res.json();
 }
 
@@ -89,13 +85,11 @@ const Home = async (): Promise<ReactElement> => {
     projects: projectsResponse.projects,
   };
 
-  const processData = servicesResponse.services.map(
-    (service: any, index: number) => ({
-      number: String(index + 1).padStart(2, "0"),
-      title: service.name,
-      text: service.description.replace(/<[^>]*>/g, ""), // strip HTML
-    })
-  );
+  const processData = servicesResponse.services.map((service, index) => ({
+    number: String(index + 1).padStart(2, "0"),
+    title: service.name,
+    text: service.description.replace(/<[^>]*>/g, ""),
+  }));
 
   return (
     <div className="body-wrapper body-marketing-agency">

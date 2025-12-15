@@ -16,6 +16,8 @@ import chooseUsData from "@/constant/MarketingAgency/common/choose-us";
 import testimonialData from "@/constant/MarketingAgency/testimonial";
 import footerData from "@/constant/MarketingAgency/footer";
 
+import type { ServicesResponse } from "@/types/api";
+
 export const metadata: Metadata = {
   title: "Services || Mila Group",
   description: "Services || Mila Group",
@@ -40,28 +42,23 @@ export const metadata: Metadata = {
   },
 };
 
-async function getServices() {
+async function getServices(): Promise<ServicesResponse> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}services`, {
-    cache: "no-store", // or use next: { revalidate: 60 }
+    cache: "no-store",
   });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch services");
-  }
-
+  if (!res.ok) throw new Error("Failed to fetch services");
   return res.json();
 }
 
 const Home = async (): Promise<ReactElement> => {
   const servicesResponse = await getServices();
 
-  const processData = servicesResponse.services.map(
-    (service: any, index: number) => ({
-      number: String(index + 1).padStart(2, "0"),
-      title: service.name,
-      text: service.description.replace(/<[^>]*>/g, ""), // strip HTML
-    })
-  );
+  const processData = servicesResponse.services.map((service, index) => ({
+    number: String(index + 1).padStart(2, "0"),
+    title: service.name,
+    text: service.description.replace(/<[^>]*>/g, ""),
+  }));
 
   return (
     <div className="body-wrapper body-inner-page">
