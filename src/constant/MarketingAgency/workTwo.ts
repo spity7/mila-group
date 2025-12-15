@@ -26,7 +26,7 @@ const workData: WorkData = {
       tags: ["BRANDING", "MOCKUP"],
       image:
         "/assets/imgs/project/projects_images_1762639523506_cam010.2 - Mila2.jpg",
-      link: "/marketing-agency/portfolio-details",
+      link: "/",
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const workData: WorkData = {
       tags: ["BRANDING", "MOCKUP"],
       image:
         "/assets/imgs/project/projects_images_1762639524215_cam013.2 - Mila2.jpg",
-      link: "/marketing-agency/portfolio-details",
+      link: "/",
     },
     // {
     //   id: 3,
