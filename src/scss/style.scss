@@ -3822,7 +3822,8 @@
       }
 
       @media #{$xl} {
-        width: 200px;
+        width: 300px;
+        top: 200px;
       }
 
       @media #{$lg} {
@@ -3838,14 +3839,14 @@
       }
 
       @media #{$sm} {
-        width: 100px;
-        top: 0;
+        width: 200px;
+        top: -100px;
         right: 0;
       }
 
       @media #{$xs} {
-        width: 75px;
-        top: 0;
+        width: 150px;
+        top: -50px;
         right: 70px;
       }
 

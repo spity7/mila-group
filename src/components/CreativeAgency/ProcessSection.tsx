@@ -14,12 +14,10 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
           <div className="section-header">
             <div className="section-title-wrapper fade-anim">
               <div className="subtitle-wrapper">
-                <span className="section-subtitle">
-                  ( Discover Work Process )
-                </span>
+                <span className="section-subtitle">( What We Do )</span>
               </div>
               <div className="title-wrapper">
-                <h2 className="section-title">How we works</h2>
+                <h2 className="section-title">Our Services</h2>
               </div>
             </div>
           </div>

@@ -17,7 +17,10 @@ const BrandSection: React.FC<BrandProps> = ({ data: brandsData }) => {
         <div className="brand-area-5-inner section-spacing">
           <div className="section-header">
             <div className="section-title-wrapper">
-              <div className="title-wrapper fade-anim" suppressHydrationWarning={true}>
+              <div
+                className="title-wrapper fade-anim"
+                suppressHydrationWarning={true}
+              >
                 <h2 className="section-title">
                   {brandsData?.title || "Trusted Clients"}
                 </h2>
@@ -25,7 +28,10 @@ const BrandSection: React.FC<BrandProps> = ({ data: brandsData }) => {
             </div>
           </div>
 
-          <div className="brands-wrapper-box fade-anim" suppressHydrationWarning={true}>
+          <div
+            className="brands-wrapper-box fade-anim"
+            suppressHydrationWarning={true}
+          >
             <div className="brands-wrapper">
               <Swiper
                 className="brand-slider-active"
@@ -42,7 +48,12 @@ const BrandSection: React.FC<BrandProps> = ({ data: brandsData }) => {
                 {repeatedBrands?.map((brand: Brand) => (
                   <SwiperSlide key={brand?.id}>
                     <div className="brand-item-5">
-                      <img src={brand?.image} alt="brand" loading="lazy" />
+                      <img
+                        src={brand?.image}
+                        alt="brand"
+                        loading="lazy"
+                        width={"200px"}
+                      />
                     </div>
                   </SwiperSlide>
                 ))}
