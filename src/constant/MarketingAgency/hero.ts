@@ -24,7 +24,7 @@ const heroData: IHeroData = {
   ],
   subtitle: "Crafting spaces that inspire",
   titleParts: [
-    { text: "Architecture with ", highLight: false },
+    { text: "Real Estate with ", highLight: false },
     { text: "Purpose", highLight: true },
   ],
   description:
