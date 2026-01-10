@@ -2,22 +2,23 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
+import { WorkData } from "@/constant/MarketingAgency/workTwo";
 
-interface Project {
-  id: number;
-  title: string;
-  tags: string[];
-  image: string;
-  link: string;
-}
+// interface Project {
+//   id: number;
+//   title: string;
+//   tags: string[];
+//   image: string;
+//   link: string;
+// }
 
-interface WorkData {
-  sectionSubtitle: string;
-  sectionTitle: string;
-  viewAllText: string;
-  viewAllLink: string;
-  projects: Project[];
-}
+// interface WorkData {
+//   sectionSubtitle: string;
+//   sectionTitle: string;
+//   viewAllText: string;
+//   viewAllLink: string;
+//   projects: Project[];
+// }
 
 interface WorkSliderProps {
   work?: WorkData;
@@ -30,61 +31,61 @@ const defaultWork: WorkData = {
   viewAllLink: "/marketing-agency/portfolio",
   projects: [
     {
-      id: 1,
+      id: "1",
       title: "Brand identity overhaul for Luxe Co.",
       tags: ["BRANDING", "PRODUCT"],
       image: "/assets/imgs/project/project-1.webp",
       link: "/marketing-agency/portfolio-details",
     },
-    {
-      id: 2,
-      title: "E-Commerce platform design for shopy",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-2.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
-    {
-      id: 3,
-      title: "Mobile app design for FitPro agency",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-3.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
-    {
-      id: 4,
-      title: "Digital Ad campaign for FlexWear",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-4.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
-    {
-      id: 5,
-      title: "Canvas of creations app design for Lumina Studio",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-12.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
-    {
-      id: 6,
-      title: "Experiences in motion with Eclipse app",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-13.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
-    {
-      id: 7,
-      title: "Echo Tech Solutions web development",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-14.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
-    {
-      id: 8,
-      title: "Innovative digital trails of Wave Media",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-15.webp",
-      link: "/marketing-agency/portfolio-details",
-    },
+    // {
+    //   id: 2,
+    //   title: "E-Commerce platform design for shopy",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-2.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Mobile app design for FitPro agency",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-3.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Digital Ad campaign for FlexWear",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-4.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Canvas of creations app design for Lumina Studio",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-12.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Experiences in motion with Eclipse app",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-13.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
+    // {
+    //   id: 7,
+    //   title: "Echo Tech Solutions web development",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-14.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
+    // {
+    //   id: 8,
+    //   title: "Innovative digital trails of Wave Media",
+    //   tags: ["BRANDING", "PRODUCT"],
+    //   image: "/assets/imgs/project/project-15.webp",
+    //   link: "/marketing-agency/portfolio-details",
+    // },
   ],
 };
 
@@ -142,7 +143,10 @@ const WorkSlider = ({ work = defaultWork }: WorkSliderProps) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="work-pagination fade-anim" suppressHydrationWarning={true}></div>
+      <div
+        className="work-pagination fade-anim"
+        suppressHydrationWarning={true}
+      ></div>
       <div className="slide-nav-wrapper">
         <div className="slide-nav fade-anim" suppressHydrationWarning={true}>
           <div className="work-button-prev slide-nav-button" role="button">

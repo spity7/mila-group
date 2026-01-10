@@ -7,8 +7,8 @@ import Header from "@/components/MarketingAgency/common/Header";
 import SmoothScroll from "@/components/MarketingAgency/Animation/SmoothScroll";
 
 // all data
-import workData from "@/constant/MarketingAgency/workTwo";
 import footerData from "@/constant/MarketingAgency/footer";
+import { getProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects || Mila Group",
@@ -36,7 +36,23 @@ export const metadata: Metadata = {
   },
 };
 
-const Home = (): ReactElement => {
+const Home = async (): Promise<ReactElement> => {
+  const { projects } = await getProjects();
+
+  const workData = {
+    sectionSubtitle: "Our Portfolio",
+    sectionTitle: "Selected works",
+    viewAllText: "See All Works",
+    viewAllLink: "/marketing-agency/portfolio",
+    projects: projects.map((item) => ({
+      id: item._id,
+      title: item.name, // ✅ backend name
+      image: item.thumbnailUrl, // ✅ backend thumbnail
+      tags: [item.status], // optional
+      link: `/digital-agency/portfolio-details/${item._id}`, // ✅ correct route
+    })),
+  };
+
   return (
     <div className="body-wrapper body-inner-page">
       <div className="body-marketing-agency">

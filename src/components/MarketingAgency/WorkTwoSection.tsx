@@ -76,7 +76,7 @@ const WorkSection: React.FC<WorkProps> = ({
       <section className={`work-area-${type}`}>
         <div className="container">
           <div className={`work-area-${type}-inner section-spacing`}>
-            <WorkFilter />
+            {/* <WorkFilter /> */}
             <div
               className="works-wrapper-box fade-anim"
               suppressHydrationWarning={true}
