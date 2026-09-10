@@ -9,7 +9,9 @@ services:
     build:
       context: .
       args:
-        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://api.milagroupco.com/api/v1/}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
     ports:
       - "127.0.0.1:3010:3010"
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
